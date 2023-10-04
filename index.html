@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>\\ Desafio Aula 12 //</title>
+
+</head>
+<body>
+    <header class="cabeçalho">
+        <div class="logo">Calculadora</div>
+         <nav class="menu"></nav>
+    </header>
+    <main class="conteiner">
+        <h1 class="dom"> Dom - document object model</h1>
+        <div class="numero">
+            <input type="number" name="txt01" id="txt01" class="botão">
+            <input type="number" name="txt02" id="txt02" class="botão">
+            <input type="button" value="+" id="btnsomar" class="botão">
+            <input type="button" value="-" id="btnsubtrair" class="botão">
+            <input type="button" value="*" id="btnmultiplicar" class="botão">
+            <input type="button" value="/" id="btndividir" class="botão">
+            <input type="button" value="Limpar" id="btnlimpar" class="botão">
+            <div id="resultado">
+                Resultado
+            </div>
+        </div>
+    </main>
+
+    <footer> \\ Aluna Melissa - Eles na Teach - 2023 //</footer>
+
+    <script>
+        var btnsomar = document.getElementById('btnsomar');
+        btnsomar.addEventListener('click', somar);
+
+        var btnsubtrair = document.getElementById('btnsubtrair');
+        btnsubtrair.addEventListener('click', subtrair);
+
+        var btnmultiplicar = document.getElementById('btnmultiplicar');
+        btnmultiplicar.addEventListener('click', multiplicar);
+
+        var btndividir = document.getElementById('btndividir');
+        btndividir.addEventListener('click', dividir);
+
+        function somar() {
+         var c1 = document.getElementById('txt01');
+         var c2 = document.getElementById('txt02');
+         var result = document.getElementById('resultado');
+
+         var num1 = parseFloat(c1.value);
+         var num2 = parseFloat(c2.value);
+
+         var resultado = num1 + num2;
+         result.innerText = "A soma é: " + resultado;
+        }
+
+        function subtrair() {
+         var c1 = document.getElementById('txt01');
+         var c2 = document.getElementById('txt02');
+         var result = document.getElementById('resultado');
+
+         var num1 = parseFloat(c1.value);
+         var num2 = parseFloat(c2.value);
+
+         var resultado = num1 - num2;
+         result.innerText = "A subtração é: " + resultado;
+        }
+
+        function multiplicar() {
+         var c1 = document.getElementById('txt01');
+         var c2 = document.getElementById('txt02');
+         var result = document.getElementById('resultado');
+
+         var num1 = parseFloat(c1.value);
+         var num2 = parseFloat(c2.value);
+
+         var resultado = num1 * num2;
+         result.innerText = "A multiplicação é: " + resultado;
+        }
+
+        function dividir() {
+         var c1 = document.getElementById('txt01');
+         var c2 = document.getElementById('txt02');
+         var result = document.getElementById('resultado');
+
+         var num1 = parseFloat(c1.value);
+         var num2 = parseFloat(c2.value);
+
+         var resultado = num1 / num2;
+         result.innerText = "A divisão é: " + resultado;
+        }
+
+        function limpar() {
+         var c1 = document.getElementById('txt01');
+         var c2 = document.getElementById('txt02');
+         var result = document.getElementById('resultado');
+
+         c1.value = ' ';
+         c2.value = ' ';
+         result.innerText = 'Resultado';
+        }
+
+    </script>
+</body>
+</html>
